@@ -1,0 +1,19 @@
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### VS Code ###
+.vscode/
+*.imi
+target/
+*.jar
+*.war
+*.zip
+*.tar
+*.tar.gz
+*.ipr
+*.iws
+/.idea
+*.iml
