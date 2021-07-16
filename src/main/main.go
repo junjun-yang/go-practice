@@ -101,6 +101,7 @@ func testPtr() {
 	fmt.Println("*ptr assign to 21")
 	fmt.Println("*ptr==", *ptr)
 	fmt.Println("i==", i)
+	fmt.Println("ptr's address ", &ptr)
 }
 
 type Vertex struct {
@@ -122,20 +123,6 @@ func testStruct() {
 	fmt.Println(*ptr)
 }
 
-/**
-测试数组
-*/
-func testArray() {
-	array := [3]int{1, 2, 3}
-	println(len(array))
-	println(cap(array))
-	for i := range array {
-		println(array[i])
-	}
-	for i, i2 := range array {
-		fmt.Println(i, i2)
-	}
-}
 
 /**
 测试切片（可动态改变大小的数组，可理解为动态数组）
@@ -197,6 +184,8 @@ func adder() func(int) int {
 go中定义之后未使用的变量，编译时会报错
 */
 func main() {
-	testSendAndReceived()
-	testBlock()
+	println(fmt.Sprintf("YT%d",time.Now().UnixNano()/1e6))
+	//testSendAndReceived()
+	//testBlock()
+	//testPtr()
 }

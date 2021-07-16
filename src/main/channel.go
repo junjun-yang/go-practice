@@ -38,3 +38,17 @@ func sum(s []int, c chan int) {
 	}
 	c <- sum
 }
+/**
+测试协程
+ */
+func hello(ch chan int) {
+	fmt.Println("hello, i'm hello goRoutine")
+	ch <- 1
+}
+func main()  {
+	ch :=make(chan int)
+	go hello(ch)
+	vars := <- ch
+	fmt.Println("i'm waiting hello ",vars)
+
+}
